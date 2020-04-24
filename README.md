@@ -22,9 +22,9 @@ Predict if a ride-share user will churn (that is, not be active within the past 
 The evaluation of our model will be based on Accuracy, Recall, and Precision.<br>
 ![Accuracy](images/accuracy1.png)
 
-![Recall](images/recall.png)
-
 ![Precision](images/precision.png)
+
+![Recall](images/recall.png)
 
 **Deliverables:**<br>
 
@@ -72,3 +72,9 @@ What are the potential impacts of implementing these plans or decisions?
 If you implement limiting surging on specific individuals, you're obviously going to be generating less money.
 
 What performance metrics did you use to evaluate these *decisions*, why?
+
+
+Future Work:
+
+Drop some of very unimportant columns that we find
+Do some feature engineering and look into linear regression
