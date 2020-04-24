@@ -42,9 +42,6 @@ def clean_data(df):
     - 'city': Cities were not of this world (Game of Thrones)
     '''
 
-    # Load in data
-    df = pd.read_csv('data/churn_train.csv')
-
     # Convert times (current in strings) to datetimes
     df['last_trip_date'] = pd.to_datetime(df['last_trip_date'])
     df['signup_date'] = pd.to_datetime(df['signup_date'])
@@ -52,7 +49,7 @@ def clean_data(df):
     # A user is 'active' if they have taken a trip since June 1, 2014
     cutoff_date = '2014-06-01'
     cutoff_date = pd.to_datetime(cutoff_date)
-    df['active'] = (df['last_trip_date'] >= cutoff_date).astype(int)
+    df['churn'] = (df['last_trip_date'] < cutoff_date).astype(int)
 
     # Make a column, avg_rating_of_driver_nan, where if the rider hasn't 
     # given out a rating, then its value is 1
@@ -61,5 +58,19 @@ def clean_data(df):
     # Make a column, avg_rating_by_driver_nan, where if the 
     # rider hasn't been given a rating, then its value is 1
     df['avg_rating_by_driver_nan'] = df['avg_rating_by_driver'].isnull().astype(int)
+    
+    '''
+    Missing Value Clean Up
+    '''
+    
+    # Fill in null values in the 'phone' column to be 'other'
+    df['phone'] = df['phone'].fillna('other')
+    
+    # Fill in null values in 'avg_rating_by_driver' and 'avg_rating_of_driver' to be the overall average
+    by_driver_avg = df['avg_rating_by_driver'].mean()
+    df['avg_rating_by_driver'] = df['avg_rating_by_driver'].fillna(by_driver_avg)
+    
+    of_driver_avg = df['avg_rating_of_driver'].mean()
+    df['avg_rating_of_driver'] = df['avg_rating_of_driver'].fillna(of_driver_avg)
 
     return df
