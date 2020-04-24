@@ -93,11 +93,15 @@ Considered a Bagging Classifier and using a 3 K-Fold split with the training dat
 
 ![Bagging Classifier](images/bagging.png)
 
-Also considered a gradient boosting classifier.
+Also considered a gradient boosting classifier. The gradient boosting classifier performed poorly when compared to the random forest classifier. Using gridsearch, more optimal hyperparameters were found, but this method is CPU intensive and time consuming. Looking at the MSE for two different learning rates for the testing and training data as function of the number of decision trees, it is clear that a learning rate of 0.08 performed better than 0.02:
 
 ![gb_lr](images/gbc_lr.png)
 
+And comparing this to the random forest classifier, it appears that the MSE is slightly better.
+
 ![gb_rf](images/gbc_rf.png)
+
+Compared to the bagging classifier, the accuracy is the same,but precision went up a bit and recall went down slightly.
 
 ![gb scores](images/gb_scores.png)
 
