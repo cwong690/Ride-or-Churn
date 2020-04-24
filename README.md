@@ -39,7 +39,16 @@ Using this computation, we found that there were about 62% of the sample data th
 
 What model did you use in the end? Why? <br>
 
+We used a Voting Classifier. All of our models were found to have not-so-great accuracies, so we combined them in a voting classifier to try to increase our accuracy.
 
+For the Voting Classifier, on the final testing set:
+
+![Voting Classifier](images/voting_classifier.png)
+
+ROC curve and area under curve:
+
+![Voting Classifier ROC](images/voting_classifer_roc.png)
+![Voting Classifier AOC](images/voting_class_aoc.png)
 
 Alternative models you considered? Why are they not good enough? <br>
 
