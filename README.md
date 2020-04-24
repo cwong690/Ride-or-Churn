@@ -3,7 +3,7 @@
 Can we predict a user will 'churn' better than you?
 
 
-![Ride Share Header](images/ride_share_logo.png)
+![Ride Share Header](images/ride_share_logo.jpg)
 
 
 ### Contributors
