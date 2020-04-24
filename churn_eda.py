@@ -32,7 +32,7 @@ def clean_data(df):
     ---------
     df: pandas dataframe 
     with additional columns:
-    - 'active': target. If 0, the user is considered 'churned', 1 if active
+    - 'churn': target. If 1, the user is considered 'churned', 0 if active
     - `avg_rating_by_driver_nan`: if the rider has been given 
         no ratings by their drivers. 1 if true
     - 'avg_rating_of_driver_nan': if the rider has given no 
@@ -42,9 +42,6 @@ def clean_data(df):
     - 'city': Cities were not of this world (Game of Thrones)
     '''
 
-    # Load in data
-    df = pd.read_csv('data/churn_train.csv')
-
     # Convert times (current in strings) to datetimes
     df['last_trip_date'] = pd.to_datetime(df['last_trip_date'])
     df['signup_date'] = pd.to_datetime(df['signup_date'])
@@ -52,7 +49,7 @@ def clean_data(df):
     # A user is 'active' if they have taken a trip since June 1, 2014
     cutoff_date = '2014-06-01'
     cutoff_date = pd.to_datetime(cutoff_date)
-    df['active'] = (df['last_trip_date'] >= cutoff_date).astype(int)
+    df['churn'] = (df['last_trip_date'] < cutoff_date).astype(int)
 
     # Make a column, avg_rating_of_driver_nan, where if the rider hasn't 
     # given out a rating, then its value is 1
