@@ -48,6 +48,8 @@ For the Voting Classifier, on the final testing set:
 ROC curve and area under curve:
 
 ![Voting Classifier ROC](images/voting_classifier_roc.png)
+
+
 ![Voting Classifier AOC](images/voting_class_aoc.png)
 
 Alternative models you considered? Why are they not good enough? <br>
@@ -69,6 +71,14 @@ Not great.
 Considered a Bagging Classifier and using a 3 K-Fold split with the training data:
 
 ![Bagging Classifier](images/bagging.png)
+
+Also considered a gradient boosting classifier.
+
+![gb_lr](images/gbc_lr.png)
+
+![gb_rf](images/gbc_rf.png)
+
+![gb scores](images/gb_scores.png)
 
 
 Based on insights from the model, what plans do you propose to reduce churn?
