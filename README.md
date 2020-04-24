@@ -21,5 +21,10 @@ Predict if a ride-share user will churn (that is, not be active within the past 
 *Note: This info is sourced from a ride-sharing company (Company X) and is interested in predicting rider retention*
 
 **Evaluation:**<br>
-The evaluation of our model will be based on Accuracy.<br>
-Accuracy $= \frac{TP+TN}{TP+TN+FP+FN}$
+The evaluation of our model will be based on Accuracy, Recall, and Precision.<br>
+![Accuracy](images/accuracy.png)
+
+![Recall](images/recall.png)
+
+![Precision](images/precision.png)
+
