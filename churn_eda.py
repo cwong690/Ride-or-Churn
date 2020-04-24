@@ -48,10 +48,12 @@ def clean_data(df):
     df['last_trip_date'] = pd.to_datetime(df['last_trip_date'])
     df['signup_date'] = pd.to_datetime(df['signup_date'])
 
-    # A user is 'active' if they have taken a trip since June 1, 2014
+    # A user is 'active' if they have taken a trip since June 1, 2014.
+    # Drop the last_trip_date
     cutoff_date = '2014-06-01'
     cutoff_date = pd.to_datetime(cutoff_date)
     df['churn'] = (df['last_trip_date'] < cutoff_date).astype(int)
+    df.drop(columns='last_trip_date', inplace=True)
 
     # Make a column, avg_rating_of_driver_nan, where if the rider hasn't 
     # given out a rating, then its value is 1
@@ -60,6 +62,14 @@ def clean_data(df):
     # Make a column, avg_rating_by_driver_nan, where if the 
     # rider hasn't been given a rating, then its value is 1
     df['avg_rating_by_driver_nan'] = df['avg_rating_by_driver'].isnull().astype(int)
+
+    # Make a column, 'days_since_signup' that is the number of days that 
+    # the user has been signed up for. drop the signup_date
+    data_pulled = '2014-07-01'
+    data_pulled = pd.to_datetime(data_pulled)
+    df['days_since_signup'] = data_pulled - df['signup_date']
+    df['days_since_signup'] = df['days_since_signup'].dt.days
+    df.drop(columns='signup_date', inplace=True)
     
     
     ### Missing Value Clean Up ##
