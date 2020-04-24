@@ -28,7 +28,7 @@ The evaluation of our model will be based on Accuracy, Recall, and Precision.<br
 
 Where,
 TP = True Positive
-TN = True Negative
+TN = True Negative  
 FP = False Positive
 FN = False Negative
 
