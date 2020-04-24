@@ -55,6 +55,8 @@ Considered a Logistic Regression Classifier and using a 3 K-Fold split with the 
 
 ![Logistic Regression](images/logistic_regression.png)
 
+Not great.
+
 
 Based on insights from the model, what plans do you propose to reduce churn?
 
