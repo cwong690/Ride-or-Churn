@@ -57,6 +57,10 @@ Considered a Logistic Regression Classifier and using a 3 K-Fold split with the 
 
 Not great.
 
+Considered a Bagging Classifier and using a 3 K-Fold split with the training data:
+
+![Bagging Classifier](images/bagging.png)
+
 
 Based on insights from the model, what plans do you propose to reduce churn?
 
