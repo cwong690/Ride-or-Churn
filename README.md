@@ -13,8 +13,6 @@ Can we predict a user will 'churn' better than you?
    
 ---
 
-## Introduction
-
 **Main Goal:** <br>
 Predict if a ride-share user will churn (that is, not be active within the past 30 days). <br>
 
@@ -36,6 +34,8 @@ The data was taken on July 1, 2014. If a user has not taken a ride in the past 3
 
 ![churned](images/churn_calculation.png)
 
+Using this computation, we found that there were about 62% of the sample data that were considered "churn".
+
 
 What model did you use in the end? Why? <br>
 
@@ -46,3 +46,29 @@ Alternative models you considered? Why are they not good enough? <br>
 Considered a Random Forest Classifier and using a 10 K-Fold split with the training data:
 
 ![Random Forest](images/random_forest.png)
+
+The Random Forest ROC Curve was plotted and ROC area under curve was found. The ROC Score was found to be 0.711.
+
+![Random Forest ROC](images/random_forest_roc.png)
+
+
+Based on insights from the model, what plans do you propose to reduce churn?
+
+Using feature importance of the random forest model, we found the following feature importances:
+
+![Random Forest Feature Importances](images/random_forest_feature_importance.png)
+
+It appears that Average Rating by Driver, Average Surge, and Surge Percentage have the most importance. 
+
+Diving into Average Surge, it appears that if the user had a higher average surge, then they were more likely to churn.
+
+![Average Surge](images/average_surge.png)
+
+The most obvious way to limit the amount of churning: STOP SURGING!!!
+Also, could limit surges on people; i.e., if a user is continually being surged, give them a break here and there.
+
+What are the potential impacts of implementing these plans or decisions? 
+
+If you implement limiting surging on specific individuals, you're obviously going to be generating less money.
+
+What performance metrics did you use to evaluate these *decisions*, why?
