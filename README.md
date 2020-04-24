@@ -47,7 +47,7 @@ For the Voting Classifier, on the final testing set:
 
 ROC curve and area under curve:
 
-![Voting Classifier ROC](images/voting_classifer_roc.png)
+![Voting Classifier ROC](images/voting_classifier_roc.png)
 ![Voting Classifier AOC](images/voting_class_aoc.png)
 
 Alternative models you considered? Why are they not good enough? <br>
