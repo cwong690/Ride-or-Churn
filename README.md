@@ -59,6 +59,9 @@ We started with some classic exploratory data analysis. We examined the distribu
 
 ![trips_30](images/trips_in_first_30_days_distplot.png)
 
+We also look at a correlation map to see how the features relate to each other and the target value, churn.
+
+![avg_surge_pct](images/corr_map.png)
 
 What model did you use in the end? Why? <br>
 
