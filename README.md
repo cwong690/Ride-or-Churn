@@ -88,16 +88,19 @@ The Random Forest ROC Curve was plotted and ROC area under curve was found. The 
 Considered a Logistic Regression Classifier and using a 3 K-Fold split with the training data:
 
 ![Logistic Regression](images/logistic_regression.png)
+
 ![Logistic Regression](images/kfolds_3.png)
 
 Considered a Logistic Regression Classifier and using a 5 K-Fold split with the training data:
 
 ![Logistic Regression](images/kfolds5.png)
+
 ![Logistic Regression](images/kfolds_5.png)
 
 Considered a Logistic Regression Classifier and using a 10 K-Fold split with the training data:
 
 ![Logistic Regression](images/kfolds10.png)
+
 ![Logistic Regression](images/kfolds_10.png)
 
 Not great.
