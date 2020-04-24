@@ -51,6 +51,10 @@ The Random Forest ROC Curve was plotted and ROC area under curve was found. The 
 
 ![Random Forest ROC](images/random_forest_roc.png)
 
+Considered a Logistic Regression Classifier and using a 3 K-Fold split with the training data:
+
+![Logistic Regression](images/logistic_regression.png)
+
 
 Based on insights from the model, what plans do you propose to reduce churn?
 
