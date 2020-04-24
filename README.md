@@ -22,7 +22,7 @@ Predict if a ride-share user will churn (that is, not be active within the past 
 
 **Evaluation:**<br>
 The evaluation of our model will be based on Accuracy, Recall, and Precision.<br>
-![Accuracy](images/accuracy.png)
+![Accuracy](images/accuracy1.png)
 
 ![Recall](images/recall.png)
 
