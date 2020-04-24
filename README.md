@@ -26,6 +26,13 @@ The evaluation of our model will be based on Accuracy, Recall, and Precision.<br
 
 ![Recall](images/recall.png)
 
+Where,
+TP = True Positive
+TN = True Negative  
+FP = False Positive
+FN = False Negative
+
+
 **Deliverables:**<br>
 
 How did we compute the target? <br>
@@ -37,9 +44,22 @@ The data was taken on July 1, 2014. If a user has not taken a ride in the past 3
 Using this computation, we found that there were about 62% of the sample data that were considered "churn".
 
 
+
+
 What model did you use in the end? Why? <br>
 
+We used a Voting Classifier. All of our models were found to have not-so-great accuracies, so we combined them in a voting classifier to try to increase our scores.
 
+For the Voting Classifier, on the final testing set:
+
+![Voting Classifier](images/voting_classifier.png)
+
+ROC curve and area under curve:
+
+![Voting Classifier ROC](images/voting_classifier_roc.png)
+
+
+![Voting Classifier AOC](images/voting_class_aoc.png)
 
 Alternative models you considered? Why are they not good enough? <br>
 
@@ -61,6 +81,16 @@ Considered a Bagging Classifier and using a 3 K-Fold split with the training dat
 
 ![Bagging Classifier](images/bagging.png)
 
+Also considered a gradient boosting classifier.
+
+![gb_lr](images/gbc_lr.png)
+
+![gb_rf](images/gbc_rf.png)
+
+![gb scores](images/gb_scores.png)
+
+
+
 
 Based on insights from the model, what plans do you propose to reduce churn?
 
@@ -77,14 +107,19 @@ Diving into Average Surge, it appears that if the user had a higher average surg
 The most obvious way to limit the amount of churning: STOP SURGING!!!
 Also, could limit surges on people; i.e., if a user is continually being surged, give them a break here and there.
 
+
+
 What are the potential impacts of implementing these plans or decisions? 
 
 If you implement limiting surging on specific individuals, you're obviously going to be generating less money.
 
-What performance metrics did you use to evaluate these *decisions*, why?
+
 
 
 Future Work:
 
 Drop some of very unimportant columns that we find
+
 Do some feature engineering and look into linear regression
+
+Dive into more of the reprussions of precision, accuracy, and recall for this problem.
