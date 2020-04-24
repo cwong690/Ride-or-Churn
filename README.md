@@ -43,7 +43,19 @@ The data was taken on July 1, 2014. If a user has not taken a ride in the past 3
 
 Using this computation, we found that there were about 62% of the sample data that were considered "churn".
 
+We started with some classic exploratory data analysis. We examined the distribution plots of some numerical columns.
 
+![avg_dist](images/avg_dist_distplot.png)
+
+![avg_raing_by_pct](images/avg_rating_by_driver_distplot.png)
+
+![avg_rating_of_pct](images/avg_rating_of_driver_distplot.png)
+
+![surge_pct](images/surge_pct_distplot.png)
+
+![avg_surge_pct](images/avg_surge_distplot.png)
+
+![trips_30](images/trips_in_first_30_days_distplot.png)
 
 
 What model did you use in the end? Why? <br>
@@ -123,3 +135,5 @@ Drop some of very unimportant columns that we find
 Do some feature engineering and look into linear regression
 
 Dive into more of the reprussions of precision, accuracy, and recall for this problem.
+
+Clean up files within project.
