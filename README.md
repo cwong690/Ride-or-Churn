@@ -28,3 +28,21 @@ The evaluation of our model will be based on Accuracy, Recall, and Precision.<br
 
 ![Precision](images/precision.png)
 
+**Deliverables:**<br>
+
+How did we compute the target? <br>
+
+The data was taken on July 1, 2014. If a user has not taken a ride in the past 30 days (since June 1, 2014), we consider that user as "churn". We used a pandas dataframe to make a new column called 'churn', where the value 1 is if that user has churned.
+
+![churned](images/churn_calculation.png)
+
+
+What model did you use in the end? Why? <br>
+
+
+
+Alternative models you considered? Why are they not good enough? <br>
+
+Considered a Random Forest Classifier and using a 10 K-Fold split with the training data:
+
+![Random Forest](images/random_forest.png)
