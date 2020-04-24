@@ -43,6 +43,8 @@ The data was taken on July 1, 2014. If a user has not taken a ride in the past 3
 
 Using this computation, we found that there were about 62% of the sample data that were considered "churn".
 
+![Logistic Regression](images/churn_df.png)
+
 We started with some classic exploratory data analysis. We examined the distribution plots of some numerical columns.
 
 ![avg_dist](images/avg_dist_distplot.png)
@@ -86,6 +88,17 @@ The Random Forest ROC Curve was plotted and ROC area under curve was found. The 
 Considered a Logistic Regression Classifier and using a 3 K-Fold split with the training data:
 
 ![Logistic Regression](images/logistic_regression.png)
+![Logistic Regression](images/kfolds_3.png)
+
+Considered a Logistic Regression Classifier and using a 5 K-Fold split with the training data:
+
+![Logistic Regression](images/kfolds5.png)
+![Logistic Regression](images/kfolds_5.png)
+
+Considered a Logistic Regression Classifier and using a 10 K-Fold split with the training data:
+
+![Logistic Regression](images/kfolds10.png)
+![Logistic Regression](images/kfolds_10.png)
 
 Not great.
 
