@@ -61,9 +61,8 @@ def clean_data(df):
     # rider hasn't been given a rating, then its value is 1
     df['avg_rating_by_driver_nan'] = df['avg_rating_by_driver'].isnull().astype(int)
     
-    '''
-    Missing Value Clean Up
-    '''
+    
+    ### Missing Value Clean Up ##
     
     # Fill in null values in the 'phone' column to be 'other'
     df['phone'] = df['phone'].fillna('other')
