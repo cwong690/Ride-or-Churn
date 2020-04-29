@@ -90,21 +90,34 @@ The Random Forest ROC Curve was plotted and ROC area under curve was found. The 
 
 Considered a Logistic Regression Classifier and using a 3 K-Fold split with the training data:
 
-![Logistic Regression](images/logistic_regression.png)
+![Logistic Regression 3 Folds Metrics](images/logistic_regression.png)
 
-![Logistic Regression](images/kfolds_3.png)
+![Logistic Regression 3 Folds ROC](images/kfolds_3.png)
+
+Looking at the coefficients we can see that the logistic regression with 3 folds placed more feature importance on the city columns with a positive relationship and the phone and luxury car user columns with a negative relationship.
+
+![Logistic Regression 3 Folds Coefficients](images/coefs_3.png)
 
 Considered a Logistic Regression Classifier and using a 5 K-Fold split with the training data:
 
-![Logistic Regression](images/kfolds5.png)
+![Logistic Regression 5 Folds Metrics](images/kfolds5.png)
 
-![Logistic Regression](images/kfolds_5.png)
+![Logistic Regression 5 Folds ROC](images/kfolds_5.png)
+
+The coefficients of the features for the 5 folds is very similar to the 3 folds.
+
+![Logistic Regression 3 Folds Coefficients](images/coefs_5.png)
 
 Considered a Logistic Regression Classifier and using a 10 K-Fold split with the training data:
 
-![Logistic Regression](images/kfolds10.png)
+![Logistic Regression 10 Folds Metrics](images/kfolds10.png)
 
-![Logistic Regression](images/kfolds_10.png)
+![Logistic Regression 10 Folds ROC](images/kfolds_10.png)
+
+Taking a look at the coefficients, it tells us essentially the same feature importance as the previous logistic models with different number of folds.
+
+![Logistic Regression 3 Folds Coefficients](images/coefs_5.png)
+
 
 Not great.
 
