@@ -166,10 +166,10 @@ If you implement limiting surging on specific individuals, you're obviously goin
 
 Future Work:
 
-Drop some of very unimportant columns that we find
+[ ] Drop some of very unimportant columns that we find
 
-Do some feature engineering and look into linear regression
+[ ] Do some feature engineering and look into linear regression
 
-Dive into more of the reprussions of precision, accuracy, and recall for this problem.
+[ ] Dive into more of the reprussions of precision, accuracy, and recall for this problem.
 
-Clean up files within project.
+[x] Clean up files within project.
